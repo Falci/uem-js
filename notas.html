@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Notas</title>
+		<link rel="stylesheet" href="css/notas.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/notas.js"></script>
+	</head>
+	<body>
+	
+		<h1>Notas</h1>
+		
+		<form id="formNotas">
+			<label>Nome:</label>
+			<input name="nome" id="nome" />
+			
+			<label>Nota 1:</label>
+			<input name="nota1" id="nota1" class="num" />
+			
+			<label>Nota 2:</label>
+			<input name="nota2" id="nota2" class="num" />
+			
+			<input type="submit" value="Adicionar" id="add" />
+		</form>
+		
+		<table id="tableNotas">
+			<tr>
+				<th>Nome</th>
+				<th>Nota 1</th>
+				<th>Nota 2</th>
+				<th>Resultado</th>
+			</tr>
+			<tr class="linhaClara">
+				<td>Fernando</td>
+				<td class="direita">8.0</td>
+				<td class="direita">7.0</td>
+				<td class="aprovado">Aprovado</td>
+			</tr>
+			<tr class="linhaEscura">
+				<td>Marcelo</td>
+				<td class="direita">5.0</td>
+				<td class="direita">6.5</td>
+				<td class="reprovado">Reprovado</td> <!-- exame -->
+			</tr>
+		</table>
+	</body>
+</html>

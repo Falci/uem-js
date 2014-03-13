@@ -1,0 +1,73 @@
+body{
+	font: 11px Verdana;
+}
+
+label,
+input[type=submit]{
+	display: block;
+	margin: 10px 0 0 0;
+}
+
+form {
+	border-bottom: 1px dotted #333;
+	margin: 0 0 10px 0;
+	padding: 0 0 10px 0;
+}
+
+table{
+	border-collapse: collapse;
+	width: 600px;
+}
+
+table tr th, 
+table tr, td {
+	border: 1px solid;
+	padding: 5px 10px;
+}
+
+.valido, 
+.invalido {
+	display: inline-block;
+	height: 16px;
+	background-image: url('../img/ok.png');
+	background-repeat: no-repeat;
+	padding: 0 0 0 18px;
+	color: green;
+}
+
+.invalido {
+	background-image: url('../img/no.png');	
+	color: red;
+}
+
+.num{
+	width: 50px;
+}
+
+.direita {
+	text-align: right;
+}
+
+.linhaClara{
+	background-color: #EEE;
+
+}
+.linhaEscura{
+	background-color: #DDD;
+}
+
+.linhaClara .aprovado{
+	background-color: #98FB98;
+}
+
+.linhaClara .reprovado{
+	background-color: #FA8072
+}
+
+.linhaEscura .aprovado{
+	background-color: #78FF78;
+}
+
+.linhaEscura .reprovado{
+	background-color: #FF6052
+}
