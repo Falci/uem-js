@@ -58,15 +58,18 @@ function validarForm(event){
           .append($tdNota2)
           .append($tdResultado);
 
-    $("#tableNotas").append($linha);
+    $("#tableNotas tbody").prepend($linha);
 
     arrumarEfeitoZebra();
 
 }
 
 function arrumarEfeitoZebra(){
-    $("#tableNotas tr:odd").addClass("linhaClara");
-    $("#tableNotas tr:even").addClass("linhaEscura");
+    $("#tableNotas tbody tr")
+        .removeClass("linhaClara linhaEscura");
+
+    $("#tableNotas tbody tr:odd").addClass("linhaClara");
+    $("#tableNotas tbody tr:even").addClass("linhaEscura");
 }
 
 /// github.com/Falci/uem-js
