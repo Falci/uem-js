@@ -1,0 +1,3 @@
+URL para ajax:
+http://iad.falci.me/curso/ajax/nome.json
+http://iad.falci.me/curso/ajax/media.json
