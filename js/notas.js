@@ -58,10 +58,12 @@ function validarForm(event){
           .append($tdNota2)
           .append($tdResultado);
 
-    $("#tableNotas tbody").prepend($linha);
+    $("#tableNotas tbody")
+            .prepend($linha)
+            .parent()
+            .show();
 
     arrumarEfeitoZebra();
-
 }
 
 function arrumarEfeitoZebra(){
