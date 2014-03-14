@@ -38,13 +38,17 @@ function validarForm(event){
     if( $elementosComErro.length > 0){
         return;
     }
+
+    var resultado = calcularMedia() ? "Aprovado" : "Reprovado";
     
     // adicionar a linha na tabela
     var $linha = $("<tr></tr>");
     var $tdNome = $("<td></td>").html( $("#nome").val() );
     var $tdNota1 = $("<td></td>").html( $("#nota1").val() );
     var $tdNota2 = $("<td></td>").html( $("#nota2").val() );
-    var $tdResultado = $("<td></td>").html( "resultado" );
+    var $tdResultado = $("<td></td>")
+            .html( resultado )
+            .addClass(resultado.toLowerCase());
 
     $tdNota1.addClass("direita");
     $tdNota2.addClass("direita");
@@ -67,6 +71,19 @@ function arrumarEfeitoZebra(){
 
 /// github.com/Falci/uem-js
 
+
+/**
+* Diz se o aluno foi aprovado ou reprovado
+*/
+function calcularMedia(){
+    // var nota1 = document.form.nota1.value;
+    var nota1 = parseFloat($("#nota1").val());
+    var nota2 = parseFloat($("#nota2").val());
+
+    var media = (nota1 + nota2) / 2;
+
+    return media >= 6;
+}
 
 
 
