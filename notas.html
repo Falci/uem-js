@@ -13,13 +13,16 @@
 		
 		<form id="formNotas">
 			<label>Nome:</label>
-			<input name="nome" id="nome" />
+			<input name="nome" id="nome" class="obrigatorio" />
+<span></span>
 			
-			<label>Nota 1:</label>
-			<input name="nota1" id="nota1" class="num" />
+<label>Nota 1:</label>
+<input name="nota1" id="nota1" class="num obrigatorio" />
+<span></span>
 			
-			<label>Nota 2:</label>
-			<input name="nota2" id="nota2" class="num" />
+<label>Nota 2:</label>
+<input name="nota2" id="nota2" class="num obrigatorio" />
+<span></span>
 			
 			<input type="submit" value="Adicionar" id="add" />
 		</form>
@@ -44,5 +47,12 @@
 				<td class="reprovado">Reprovado</td> <!-- exame -->
 			</tr>
 		</table>
+
+        <span id="log"></span>
 	</body>
 </html>
+
+
+
+
+
