@@ -23,15 +23,54 @@ function validarForm(event){
         if($elem.val() === ""){
             $elem.next()
                 .html("Este campo é obrigatório")
-                .addClass("invalido")
+                .removeClass("valido")
+                .addClass("invalido");
+        } else {
+            $elem.next()
+                .html("")
+                .addClass("valido")
+                .removeClass("invalido");
         }
     });
 
+    // verificar se há erros;
+    var $elementosComErro = $(".invalido");
+    if( $elementosComErro.length > 0){
+        return;
+    }
+    
+    // adicionar a linha na tabela
+    var $linha = $("<tr></tr>");
+    var $tdNome = $("<td></td>").html( $("#nome").val() );
+    var $tdNota1 = $("<td></td>").html( $("#nota1").val() );
+    var $tdNota2 = $("<td></td>").html( $("#nota2").val() );
+    var $tdResultado = $("<td></td>").html( "resultado" );
 
-    // 3) para as notas: verificar se é valor entre 0 e 10
+    $tdNota1.addClass("direita");
+    $tdNota2.addClass("direita");
+
+    $linha.append($tdNome)
+          .append($tdNota1)
+          .append($tdNota2)
+          .append($tdResultado);
+
+    $("#tableNotas").append($linha);
+
+    arrumarEfeitoZebra();
 
 }
 
-
+function arrumarEfeitoZebra(){
+    $("#tableNotas tr:odd").addClass("linhaClara");
+    $("#tableNotas tr:even").addClass("linhaEscura");
+}
 
 /// github.com/Falci/uem-js
+
+
+
+
+
+
+
+
