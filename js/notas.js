@@ -8,9 +8,9 @@ $(function(){
 
     //  1               2             3
     $("#formNotas").on('submit', validarForm)
+                   .on('reset', limparValidacoes);
 
 });
-
 
 function validarForm(event){
     event.preventDefault();
@@ -64,6 +64,7 @@ function validarForm(event){
             .show();
 
     arrumarEfeitoZebra();
+    $("#formNotas").trigger('reset');
 }
 
 function arrumarEfeitoZebra(){
@@ -89,6 +90,15 @@ function calcularMedia(){
 
     return media >= 6;
 }
+
+function limparValidacoes(){
+    $(".valido, .invalido")
+        .removeClass("valido invalido")
+        .html("");
+}
+
+
+
 
 
 

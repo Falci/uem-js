@@ -8,6 +8,10 @@ input[type=submit]{
 	margin: 10px 0 0 0;
 }
 
+input[type=submit]{
+    display: inline-block;
+}
+
 form {
 	border-bottom: 1px dotted #333;
 	margin: 0 0 10px 0;
