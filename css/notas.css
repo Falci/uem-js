@@ -30,7 +30,8 @@ table tr, td {
 }
 
 .valido, 
-.invalido {
+.invalido,
+.loading {
 	display: inline-block;
 	height: 16px;
 	background-image: url('../img/ok.png');
@@ -42,6 +43,11 @@ table tr, td {
 .invalido {
 	background-image: url('../img/no.png');	
 	color: red;
+}
+
+.loading {
+	background-image: url('../img/loading.gif');	
+	color: #CCC;
 }
 
 .num{
