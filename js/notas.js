@@ -1,3 +1,5 @@
+https://github.com/Falci/uem-js/blob/master/img/loading.gif
+
 $(function(){
 
     $("#log").html("Começando bem!");
@@ -39,6 +41,37 @@ function validarForm(event){
         return;
     }
 
+    console.log( "antes do ajax" );
+    var span = $("#nome").next();
+    span.addClass("loading");
+
+    var nome = $("#nome").val();
+    var params = {
+        url: "http://iad.falci.me/curso/ajax/nome.json",
+        dataType: "json",
+        data: {
+            nome: nome
+        },
+        success: function(retorno){
+            console.log( "resposta do ajax" );
+            span.removeClass("loading");
+
+            if( !retorno.valido ){
+                span.addClass("invalido")
+                    .removeClass("valido")
+                    .html("Nome inválido");
+            } else {
+                adicionarLinhas();
+            }
+        }
+    };
+    $.ajax(params);
+    console.log( "depois do ajax" );
+
+    
+}
+
+function adicionarLinhas(){
     var resultado = calcularMedia() ? "Aprovado" : "Reprovado";
     
     // adicionar a linha na tabela
