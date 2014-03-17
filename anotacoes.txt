@@ -1,3 +1,5 @@
 URL para ajax:
-http://iad.falci.me/curso/ajax/nome.json
-http://iad.falci.me/curso/ajax/media.json
+http://iad.falci.me/curso/ajax/nome.json?nome=Fernando
+http://iad.falci.me/curso/ajax/media.json?nota1=5.5&nota2=6.5
+http://iad.falci.me/curso/ajax/estado.json
+http://iad.falci.me/curso/ajax/cidade.json?estado=17
