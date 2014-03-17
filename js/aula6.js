@@ -18,9 +18,49 @@ $(function(){
                 $estado.append( $option );
             }
 
+            bindEstado();
         }
     });
 
 });
 
+function bindEstado(){
+    $("#estado").on("change", function(){
+        // carregar lista de cidades;
+        var estadoSelecionado = $("#estado").val();
 
+        carregarCidades(estadoSelecionado);
+
+    });
+
+}
+
+function carregarCidades(estadoSelecionado){
+    var $cidade = $("#cidade").html("")
+            .attr("disabled","disabled")
+            .addClass("loading")
+            .append("<option>Carregando...</option>");
+    
+
+    $.ajax({
+        url: "http://iad.falci.me/curso/ajax/cidade.json",
+        dataType: "json",
+        data: {
+            estado: estadoSelecionado
+        },
+        success: function(listaCidade){
+            $cidade.removeAttr("disabled").html("")
+                   .removeClass("loading");
+
+            for(var i in listaCidade){
+                var item = listaCidade[i];
+                var $op = $("<option />")
+                                .val( item.id )
+                                .html( item.nome );
+
+                $cidade.append($op);
+            }
+        }
+    });
+
+}
