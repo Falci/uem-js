@@ -1,4 +1,4 @@
-https://github.com/Falci/uem-js/blob/master/img/loading.gif
+// https://github.com/Falci/uem-js/blob/master/img/loading.gif
 
 $(function(){
 
@@ -45,6 +45,8 @@ function validarForm(event){
     var span = $("#nome").next();
     span.addClass("loading");
 
+    $.blockUI({ message: 'Carregando' });
+
     var nome = $("#nome").val();
     var params = {
         url: "http://iad.falci.me/curso/ajax/nome.json",
@@ -53,6 +55,7 @@ function validarForm(event){
             nome: nome
         },
         success: function(retorno){
+            $.unblockUI();
             console.log( "resposta do ajax" );
             span.removeClass("loading");
 
