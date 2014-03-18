@@ -3,9 +3,14 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Notas</title>
+		<link rel="stylesheet" href="themes/blue/style.css" />
 		<link rel="stylesheet" href="css/notas.css" />
+        <link rel="stylesheet" href="css/tipsy.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.blockUI.js"></script>
+
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/jquery.tipsy.js"></script>
 <script type="text/javascript" src="js/notas.js"></script>
 	</head>
 	<body>
@@ -14,15 +19,15 @@
 		
 		<form id="formNotas">
 			<label>Nome:</label>
-			<input name="nome" id="nome" class="obrigatorio" />
+			<input name="nome" id="nome" title="Digite um nome" class="obrigatorio" />
 <span></span>
 			
 <label>Nota 1:</label>
-<input name="nota1" id="nota1" class="num obrigatorio" />
+<input name="nota1" id="nota1" title="Digite a nota 1" class="num obrigatorio" />
 <span></span>
 			
 <label>Nota 2:</label>
-<input name="nota2" id="nota2" class="num obrigatorio" />
+<input name="nota2" id="nota2" title="Digite a nota 2" class="num obrigatorio" />
 <span></span>
 			
     <br />
@@ -30,7 +35,7 @@
             <input type="reset" value="Limpar" />
 		</form>
 		
-		<table id="tableNotas" style="display:none">
+		<table id="tableNotas" style="display:none" class="tablesorter">
             <thead>
 			    <tr>
 				    <th>Nome</th>

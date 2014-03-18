@@ -29,9 +29,9 @@ table tr, td {
 	padding: 5px 10px;
 }
 
-.valido, 
-.invalido,
-.loading {
+span.valido, 
+span.invalido,
+span.loading {
 	display: inline-block;
 	height: 16px;
 	background-image: url('../img/ok.png');
@@ -40,12 +40,12 @@ table tr, td {
 	color: green;
 }
 
-.invalido {
+span.invalido {
 	background-image: url('../img/no.png');	
 	color: red;
 }
 
-.loading {
+span.loading {
 	background-image: url('../img/loading.gif');	
 	color: #CCC;
 }

@@ -1,4 +1,5 @@
 // https://github.com/Falci/uem-js/blob/master/img/loading.gif
+// https://github.com/jaz303/tipsy
 
 $(function(){
 
@@ -11,6 +12,13 @@ $(function(){
     //  1               2             3
     $("#formNotas").on('submit', validarForm)
                    .on('reset', limparValidacoes);
+
+
+    $("#tableNotas")
+        //.on("update",arrumarEfeitoZebra)
+        .tablesorter();
+
+    $("[title]").tipsy({gravity: 'w'});
 
 });
 
@@ -99,7 +107,9 @@ function adicionarLinhas(){
             .parent()
             .show();
 
-    arrumarEfeitoZebra();
+    $("#tableNotas").trigger("update"); 
+
+//    arrumarEfeitoZebra();
     $("#formNotas").trigger('reset');
 }
 

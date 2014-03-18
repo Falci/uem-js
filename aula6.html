@@ -5,7 +5,12 @@
 		<title>Notas</title>
 		<link rel="stylesheet" href="css/notas.css" />
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/aula6.js"></script>
+        <script type="text/javascript" src="js/jquery.blockUI.js"></script>
+
+<script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+
+<script type="text/javascript" src="js/jquery.validate.js"></script>		
+<script type="text/javascript" src="js/aula6.js"></script>
 	</head>
 	<body>
 	
@@ -22,6 +27,26 @@
 <label>Cidade:</label>
 <select name="cidade" id="cidade" disabled="disabled">
 </select>
+
+<label>Telefone:</label>
+<input type="text" name="telefone" id="telefone" 
+    data-mascara="(99) 9999-9999" />
+
+<label>CPF:</label>
+<input type="text" name="cpf" id="cpf"
+    data-mascara="999.999.999-99" />
+
+<label>Data de Nascimento:</label>
+<input type="text" name="dob" id="dob"
+    data-mascara="99/99/9999" />
+
+<label>CNPJ:</label>
+<input type="text" name="cnpj" id="cnpj"
+    data-mascara="99.999.999/9999-99" />
+
+<label>Nota</label>
+<input name="nota" class="num" 
+    data-mascara="9.9" />
 
 <br />
          
