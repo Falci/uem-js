@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Aula 8</title>
+
+  <link rel="stylesheet" href="themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="themes/redmond/jquery-ui-1.10.4.custom.css" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/i18n/jquery.ui.datepicker-pt-BR.js"></script>
+  <script type="text/javascript" src="js/aula8.js"></script>
+	</head>
+	<body>
+
+<div id="tabs">
+    <ul>
+        <li><a href="#geral">Geral</a></li>
+        <li><a href="#dados">Dados Pessoais</a></li>
+        <li><a href="#end">Endereço</a></li>
+        <li><a href="#accordion">Accordion</a></li>
+        <li><a href="#drag">Drag</a></li>
+        <li><a href="#ac">Autocomplete</a></li>
+    </ul>
+    
+    <div id="dados">
+        Esta é a aba de dados pessoais
+    </div>
+
+    <div id="end">
+        Aba de endereço
+    </div>
+
+    <div id="geral">
+
+        <button id="botao">Teste</button><br />
+
+        <input name="dob" id="dob" 
+            placeholder="Data de nascimento" />
+
+    </div>
+
+    <div id="accordion"><!-- aba -->
+        
+        <div id="efeitoAccordion">
+            <h3>Dia 1</h3>
+            <div>
+                <p>Introdução e conceitos de HTML e CSS<br />
+                Ferramentas.</p>
+            </div>
+
+            <h3>Dia 2</h3>
+            <div>
+                <p>Javascript. <br />Tipos de variaveis<br />
+                Arrays, objetos e funções</p>
+            </div>
+
+            <h3>Dia 3</h3>
+            <div>
+           <p>Manipulando elementos e propriedades com JS.<br />
+              Eventos.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="drag">
+
+        <div id="quadro" style="width: 50px; height:50px; background-color: #00F"></div>
+
+
+    </div>
+
+    <div id="ac">
+        
+        <input id="autocomplete" placeholder="Buscar"
+            class="ui-state-error" />
+
+    </div>
+
+</div>
+
+	</body>
+</html>
+
+
+
+
+
